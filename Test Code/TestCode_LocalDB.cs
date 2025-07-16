@@ -35,5 +35,12 @@ namespace UnitTest_TOP_OCR.Test_Code
             Assert.AreEqual("Local Item#1", saved.Name);
 
         }
+        [TestMethod]
+        public void TestLocalDB_GetAll_TestItem()
+        {
+            var items = _repos.GetAllList();
+            Assert.IsNotNull(items);
+            Assert.IsTrue(items.Any());
+        }
     }
 }
